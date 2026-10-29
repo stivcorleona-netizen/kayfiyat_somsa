@@ -1,1 +1,0 @@
-# kayfiyat_somsa
