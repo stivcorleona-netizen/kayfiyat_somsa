@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kayfiyat Somsa — tandirdan issiq somsa</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="edge l" aria-hidden="true"></div><div class="edge r" aria-hidden="true"></div>
+<header class="top"><div class="wrap">
+  <button class="logo" data-go="bosh"><img class="lg" alt="" width="40" height="40"> Kayfiyat Somsa</button>
+  <nav class="tabs" aria-label="Bo’limlar">
+    <button data-go="bosh">Bosh</button><button data-go="menyu">Menyu</button><button data-go="filiallar">Filiallar</button><button data-go="buyurtma" class="hot">Buyurtma <span id="cnt"></span></button>
+  </nav></div></header>
+
+<main>
+<section class="view" id="v-bosh"><div class="wrap">
+  <div class="hero">
+    <div>
+      <h1>Tandirdan chiqqan <span>kayfiyat</span></h1>
+      <p class="lead">Xalqlarni somsa birlashtiradi. Toshkentdagi 6 filialda issiq somsa, ko’pchiligi kechayu kunduz ochiq.</p>
+      <div class="cta"><button class="btn p" data-go="menyu">Menyuni ko’rish</button></div>
+    </div>
+    <div class="carpet"><div class="cw"><canvas id="cv" width="768" height="1170" role="img" aria-label="Besh xalq naqshlari to’qilgan gilam"></canvas><div id="ring"></div></div>
+      <p class="cap" id="cap" aria-live="polite"></p><div class="chips2" id="pc"></div></div>
+  </div>
+  <div class="stats">
+    <div><div class="num">6</div><small>filial Toshkentda</small></div>
+    <div><div class="num">24/7</div><small>ko’p filiallarda</small></div>
+    <div><div class="num">5 000</div><small>so’mdan boshlab</small></div>
+  </div>
+  <h3 class="pt">Ommabop</h3>
+  <div class="grid" id="pop"></div>
+  <h3 class="pt">Bitta somsa, besh xalq</h3>
+  <p class="sub" style="margin-top:0">Kayfiyat Somsa o’zbek, qozoq, qirg’iz, turkman va tojik xalqlarini bitta dasturxonga yig’ishni istaydi.</p>
+  <div class="ctry">
+    <div><b>O’zbekiston</b><span>Xush kelibsiz</span></div>
+    <div><b>Qozog’iston</b><span lang="kk">Қош келдіңіз</span></div>
+    <div><b>Qirg’iziston</b><span lang="ky">Кош келиңиз</span></div>
+    <div><b>Turkmaniston</b><span lang="tk">Hoş geldiňiz</span></div>
+    <div><b>Tojikiston</b><span lang="tg">Хуш омадед</span></div>
+  </div>
+  <div class="nat">
+    <h3>Tabiat qo’ynida somsa</h3>
+    <p>Qo’shni yurtlarga tez-tez boramiz, tog’u dalada somsa pishiramiz va u yerlarda birga olingan video va suratlarni Instagramda ulashamiz.</p>
+    <a class="btn" href="https://www.instagram.com/kayfiyat_somsa/" target="_blank" rel="noopener">Instagramda ko’rish</a>
+  </div>
+</div></section>
+
+<section class="view" id="v-menyu" hidden><div class="wrap">
+  <h2>Menyu</h2>
+  <p class="sub">Narxlar so’mda. Taomni savatga qo’shing, keyin buyurtma bering.</p>
+  <div class="chips" id="chips"></div>
+  <div id="menu"></div>
+  <div class="fbar" id="fbar" hidden><span id="fsum"></span><button class="btn p" data-go="buyurtma">Buyurtmaga o’tish</button></div>
+</div></section>
+
+<section class="view" id="v-filiallar" hidden><div class="wrap">
+  <h2>Filiallar</h2>
+  <p class="sub">Toshkent bo’ylab 6 ta filial. Yaqinini tanlang va shu yerdan buyurtma bering.</p>
+  <div style="display:flex;flex-wrap:wrap;gap:.7rem;align-items:center;margin-bottom:1.6rem"><button class="btn p" type="button" id="near">Menga yaqin filialni topish</button><span id="nears" class="note" style="margin:0"></span><a id="nearlink" class="btn" target="_blank" rel="noopener" hidden>Xaritada ko’rish →</a></div>
+  <div class="br" id="br-list"></div>
+  <p class="note">Manzillar, telefonlar va ish vaqti xarita xizmatlaridan olingan. Borishdan oldin qo’ng’iroq qilib aniqlashtirib oling.</p>
+</div></section>
+
+<section class="view" id="v-buyurtma" hidden><div class="wrap">
+  <h2>Buyurtma berish</h2>
+  <p class="sub">Taomlarni tanlang, filialni belgilang va yuboring.</p>
+  <div class="ord">
+    <div class="panel">
+      <h3><span class="sn">1</span>Savat</h3>
+      <div class="chek"><div id="lines"></div><div class="tot"><span>Jami</span><span id="total">0</span></div></div>
+      <button class="btn" data-go="menyu" style="margin-top:1.4rem">Menyuga qaytish</button>
+    </div>
+    <div class="panel">
+      <h3><span class="sn">2</span>Tafsilotlar</h3>
+      <label class="lab" for="br">Filial</label><select id="br"></select>
+      <span class="lab">Qanday olasiz?</span>
+      <div class="mode"><label><input type="radio" name="m" value="Olib ketaman" checked>Olib ketaman</label><label><input type="radio" name="m" value="Yetkazib berish">Yetkazib berish</label></div>
+      <div id="adrw" hidden><label class="lab" for="adr">Manzilingiz</label><input type="text" id="adr" placeholder="Ko’cha, uy, mo’ljal"><button class="btn" type="button" id="loc" style="margin-top:.7rem">Joylashuvimni aniqlash</button><p class="note" id="locs" style="margin:.4rem 0 0"></p></div>
+      <label class="lab" for="nm">Ismingiz</label><input type="text" id="nm" autocomplete="name">
+      <label class="lab" for="ph">Telefon raqamingiz</label><input type="tel" id="ph" placeholder="+998 90 123 45 67" autocomplete="tel">
+      <span class="lab">To’lov usuli</span>
+      <div class="mode"><label><input type="radio" name="p" value="Naqd" checked>Naqd</label><label><input type="radio" name="p" value="Karta">Karta</label></div>
+      <p class="note" id="paynote" style="margin:.5rem 0 0">To’lov borganingizda yoki kuryer olib kelganda, naqd yoki karta orqali qilinadi.</p>
+      <label class="lab" for="cm">Izoh</label><input type="text" id="cm" placeholder="Masalan: achchiq bo’lsin">
+      <h3 style="margin-top:1.8rem"><span class="sn">3</span>Yuborish</h3>
+      <div class="send">
+        <button class="btn p" id="submit" type="button" hidden>Buyurtmani yuborish</button>
+        <a class="btn" id="call" href="tel:+998955909696">Qo’ng’iroq qilish</a>
+        <a class="btn" id="tg" href="#" target="_blank" rel="noopener">Telegram orqali yuborish</a>
+      </div>
+      <p class="note" id="hint" style="margin:.8rem 0 0"></p>
+    </div>
+  </div>
+</div></section>
+
+<section class="view" id="v-qabul" hidden><div class="wrap">
+  <div class="ok"><span class="okc">✓</span><h2 id="oid">Buyurtma yuborildi</h2><p class="sub" id="ost" style="margin:0"></p></div>
+  <ol class="trk" id="trk"></ol>
+  <div class="panel" id="osum" style="margin-bottom:1.2rem"></div>
+  <div class="cta"><button class="btn p" data-go="menyu">Yangi buyurtma</button><a class="btn" id="ocall" href="tel:+998955909696">Filialga qo’ng’iroq</a></div>
+</div></section>
+
+<section class="view" id="v-boshqaruv" hidden><div class="wrap">
+  <h2>Kelgan buyurtmalar</h2>
+  <p class="sub" id="anote">Kafe xodimlari uchun. Buyurtmalarni qabul qiling va holatini yangilang, mijoz buni o’z ekranida ko’radi.</p>
+  <div id="olist"></div>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span>© 2026 Kayfiyat Somsa, Toshkent</span><span><a href="https://www.instagram.com/kayfiyat_somsa/" rel="noopener">Instagram</a> · <a href="https://kayfiyat-somsa.taplink.ws" rel="noopener">Taplink</a> · <a href="#boshqaruv" data-go="boshqaruv">Xodimlar</a></span></div></footer>
+
+<script src="script.js"></script>
+</body>
+</html>
