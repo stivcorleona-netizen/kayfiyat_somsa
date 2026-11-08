@@ -1,3 +1,4 @@
+const LOGO='',PH={c:'',y:'',n:'',s:''};
 const TG_TOKEN='9151058937:AAHUw9RGUU1HQMHBgyCotBcsSS8hrAZUyxA', TG_CHAT='-5350327781';
 
 async function sendTG(o){
