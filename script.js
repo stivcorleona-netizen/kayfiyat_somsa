@@ -1,4 +1,4 @@
-const TG_TOKEN='9151058937:AAHUw9RGUU1HQMHBgyCotBcsSS8hrAZUyxA', TG_CHAT='--5350327781';
+const TG_TOKEN='9151058937:AAHUw9RGUU1HQMHBgyCotBcsSS8hrAZUyxA', TG_CHAT='-5350327781';
 
 async function sendTG(o){
  const text='🆕 Buyurtma №'+o.id+'\nFilial: '+o.br+'\n'+o.mode+(o.adr?': '+o.adr:'')+
