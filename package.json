@@ -2,5 +2,7 @@
   "name": "kayfiyat-somsa",
   "version": "1.0.0",
   "private": true,
-  "engines": { "node": ">=18" }
+  "engines": {
+    "node": ">=18"
+  }
 }
