@@ -1,5 +1,5 @@
 // Umumiy qism: ma'lumotlar, Redis (Upstash), Telegram, holat mashinasi, xabar matnlari
-const crypto=require('crypto');
+const crypto = require('crypto');
 const MENU=[
 ['kt','Kartoshka sirli',7000,0,'Kartoshka va pishloq bilan'],
 ['tv','Tovuq sirli',7000,0,'Tovuq va pishloq bilan'],
